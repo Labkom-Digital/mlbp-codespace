@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 go install github.com/gopherdata/gophernotes@v0.7.5
 mkdir -p ~/.local/share/jupyter/kernels/gophernotes
 cd ~/.local/share/jupyter/kernels/gophernotes
