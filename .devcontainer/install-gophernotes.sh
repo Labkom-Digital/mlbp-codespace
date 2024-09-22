@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo su vscode
 go install github.com/gopherdata/gophernotes@v0.7.5
 mkdir -p /home/vscode/.local/share/jupyter/kernels/gophernotes
 cd /home/vscode/.local/share/jupyter/kernels/gophernotes
