@@ -27,11 +27,15 @@ RUN git clone https://github.com/vickumar1981/jupyter-dart-kernel.git /opt/jupyt
 
 RUN ln -s /usr/bin/dart /usr/local/bin/dart
 
-RUN ./tmp/install-go.sh
+RUN chmod +x /tmp/install-go.sh
+RUN /tmp/install-go.sh
 
 ENV PATH=/usr/local/go/bin:/go/bin:${PATH}
 
-RUN ./tmp/install-gophernotes.sh
+RUN chmod +x /tmp/install-gophernotes.sh
+RUN /tmp/install-gophernotes.sh
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+WORKDIR /workspaces
