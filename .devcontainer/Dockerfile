@@ -30,6 +30,8 @@ RUN ln -s /usr/bin/dart /usr/local/bin/dart
 RUN chmod +x /tmp/install-go.sh
 RUN /tmp/install-go.sh
 
+ENV PATH=/usr/local/go/bin:/go/bin:${PATH}
+
 RUN chmod +x /tmp/install-gophernotes.sh
 RUN /tmp/install-gophernotes.sh
 
