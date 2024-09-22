@@ -28,3 +28,9 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN ln -s /usr/bin/dart /usr/local/bin/dart
+
+# RUN ./install-go.sh
+
+# ENV PATH=/usr/local/go/bin:/go/bin:${PATH}
+
+# RUN ./install-gophernotes.sh
