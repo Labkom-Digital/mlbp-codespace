@@ -38,5 +38,4 @@ RUN /tmp/install-gophernotes.sh
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-USER vscode
-RUN echo 'export PATH=/usr/local/go/bin:/go/bin:${PATH}' >> ~/.bashrc
+RUN echo 'export PATH=/usr/local/go/bin:/go/bin:${PATH}' >> /home/vscode/.bashrc
