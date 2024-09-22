@@ -14,9 +14,7 @@
                 "ms-toolsai.jupyter",
 				"ms-azuretools.vscode-docker",
 				"DavidAnson.vscode-markdownlint",
-				"golang.go",
-				
-
+				"golang.go"
 			]
 		}
 	},
