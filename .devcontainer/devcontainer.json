@@ -1,0 +1,27 @@
+{
+	"name": "Labkom Digital - Multilang Basic Programming",
+	"dockerFile": "Dockerfile",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Dart-Code.dart-code",
+				"Dart-Code.flutter",
+				"ms-toolsai.jupyter",
+				"DavidAnson.vscode-markdownlint",
+				"golang.go",
+				"cweijan.vscode-database-client2",
+				"yzhang.markdown-all-in-one"
+			]
+		}
+	},
+	"capAdd": [
+		"SYS_PTRACE"
+	],
+	"securityOpt": [
+		"seccomp=unconfined"
+	]
+}
