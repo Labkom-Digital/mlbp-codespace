@@ -32,8 +32,11 @@ RUN /tmp/install-go.sh
 
 ENV PATH=/usr/local/go/bin:/go/bin:${PATH}
 
-RUN chmod +x /tmp/install-gophernotes.sh
-RUN /tmp/install-gophernotes.sh
+USER vscode
+
+RUN bash /tmp/install-gophernotes.sh
+
+USER root
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
