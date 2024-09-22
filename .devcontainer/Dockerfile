@@ -1,8 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/miniconda:1-3
 
-COPY environment.yml* .devcontainer/noop.txt /tmp/conda-tmp/
-RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
-    && rm -rf /tmp/conda-tmp
+COPY ./environment.yml /tmp/conda-tmp/
+RUN conda env update -n base -f /tmp/conda-tmp/environment.yml
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -13,12 +12,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     build-essential
 
+RUN pip install --no-cache-dir notebook jupyterlab setuptools jupyterdartkernel
+
 RUN curl -fsSL https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/dart-archive-keyring.gpg && \
     echo "deb [signed-by=/usr/share/keyrings/dart-archive-keyring.gpg] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main" | tee /etc/apt/sources.list.d/dart_stable.list > /dev/null && \
     apt-get update && \
     apt-get install -y --no-install-recommends dart
-
-RUN pip install --no-cache-dir notebook jupyterlab setuptools jupyterdartkernel
 
 RUN git clone https://github.com/vickumar1981/jupyter-dart-kernel.git /opt/jupyter-dart-kernel && \
     cd /opt/jupyter-dart-kernel && \
