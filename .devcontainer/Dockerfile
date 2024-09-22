@@ -1,5 +1,6 @@
 FROM mcr.microsoft.com/devcontainers/miniconda:1-3
 
+COPY ./install* /tmp/
 COPY ./environment.yml /tmp/conda-tmp/
 RUN conda env update -n base -f /tmp/conda-tmp/environment.yml
 
@@ -24,13 +25,13 @@ RUN git clone https://github.com/vickumar1981/jupyter-dart-kernel.git /opt/jupyt
     pip install . && \
     jupyter kernelspec install /opt/jupyter-dart-kernel
 
-RUN apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
 RUN ln -s /usr/bin/dart /usr/local/bin/dart
 
-# RUN ./install-go.sh
+RUN ./tmp/install-go.sh
 
-# ENV PATH=/usr/local/go/bin:/go/bin:${PATH}
+ENV PATH=/usr/local/go/bin:/go/bin:${PATH}
 
-# RUN ./install-gophernotes.sh
+RUN ./tmp/install-gophernotes.sh
+
+RUN apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
