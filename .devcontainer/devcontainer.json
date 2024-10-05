@@ -12,8 +12,15 @@
 				"golang.go",
 				"cweijan.vscode-database-client2",
 				"yzhang.markdown-all-in-one",
-				"formulahendry.code-runner"
-			]
+				"formulahendry.code-runner",
+				"ms-vsliveshare.vsliveshare" // Add Live Share extension
+			],
+			"settings": {
+				// Optional: Additional settings for Live Share
+				"liveShare.allowGuestControl": true,
+				"liveShare.autoShareOpenEditors": true,
+				"liveShare.shareTerminal": true
+			}
 		}
 	},
 	"postCreateCommand": "cp .devcontainer/.bashrc ~/.bashrc",
