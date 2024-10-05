@@ -1,0 +1,12 @@
+$ go version                      
+	^ untuk mengetahui versi Go yang sedang dipakai
+$ go run <nama_file.go>          
+	^ untuk menjalankan kode Go
+$ go build <nama_file.go>        
+	^ untuk mengkompilasi kode Go menjadi file executable
+$ go mod init <nama_modul>       
+	^ untuk menginisialisasi modul Go baru
+$ go mod tidy                     
+	^ untuk mengunduh dependencies yang terdaftar dalam go.mod
+$ go help                         
+	^ untuk menampilkan bantuan tentang Go

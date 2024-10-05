@@ -1,0 +1,10 @@
+$ dart --version                  
+	^ untuk mengetahui versi Dart yang sedang dipakai
+$ dart run <nama_file.dart>      
+	^ untuk menjalankan kode Dart
+$ dart compile exe <nama_file.dart> 
+	^ untuk mengkompilasi kode Dart menjadi file executable
+$ dart pub get                    
+	^ untuk mengunduh dependencies yang terdaftar dalam pubspec.yaml
+$ dart help                       
+	^ untuk menampilkan bantuan tentang Dart

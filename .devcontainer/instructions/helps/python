@@ -1,0 +1,10 @@
+$ python --version                
+	^ untuk mengetahui versi Python yang sedang dipakai
+$ python <nama_file.py>          
+	^ untuk menjalankan kode Python
+$ python -m pip install <nama_library> 
+	^ untuk menginstal library Python
+$ python -m py_compile <nama_file.py> 
+	^ untuk mengkompilasi kode Python menjadi bytecode
+$ python -h                       
+	^ untuk menampilkan bantuan tentang Python

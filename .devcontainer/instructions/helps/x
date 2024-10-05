@@ -1,0 +1,13 @@
+$ NAMA=<nama>            
+	^ untuk mengatur nama anda
+$ x                      
+	^ untuk menampilkan bantuan ini
+$ x <x|bash|dart|python|go>
+	^ untuk menampilkan bantuan dari aplikasi yang dipilih
+
+Contoh Penggunaan:
+$ NAMA ='Alfian Badrul Isnan'
+$ x
+$ x bash
+$ x dart
+$ x python go

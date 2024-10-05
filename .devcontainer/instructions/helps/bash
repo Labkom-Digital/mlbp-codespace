@@ -1,0 +1,40 @@
+$ clear
+	^ untuk menghapus/membersihkan tampilan terminal
+$ ls                     
+	^ untuk mendaftar seluruh file yang tersedia pada folder ini
+$ cd                     
+	^ untuk membuka folder
+$ cd ..                  
+	^ untuk kembali pada folder sebelumnya
+$ pwd                    
+	^ untuk menampilkan path direktori saat ini
+$ mkdir                  
+	^ untuk membuat folder baru
+$ rmdir                  
+	^ untuk menghapus folder (jika kosong)
+$ rm                     
+	^ untuk menghapus file
+$ rm -r                  
+	^ untuk menghapus folder beserta isinya
+$ touch                  
+	^ untuk membuat file baru
+$ mv                     
+	^ untuk memindahkan/mengganti nama file atau folder
+$ echo                   
+	^ untuk menampilkan teks
+$ cat                    
+	^ untuk menampilkan isi file
+$ clear                  
+	^ untuk membersihkan layar terminal
+$ history                
+	^ untuk menampilkan daftar perintah yang telah dijalankan
+$ man <perintah>         
+	^ untuk menampilkan manual dari perintah yang diberikan
+$ nano <nama_file>       
+	^ untuk mengedit file menggunakan editor teks nano
+$ grep <pola> <file>     
+	^ untuk mencari pola dalam file
+$ find <direktori> -name <nama> 
+	^ untuk mencari file dengan nama tertentu dalam direktori
+$ alias <alias>=<perintah>
+	^ untuk membuat alias perintah contoh: $ alias run="dart run latihan.dart"

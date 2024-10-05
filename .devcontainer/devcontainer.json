@@ -16,6 +16,7 @@
 			]
 		}
 	},
+	"postCreateCommand": "cp .devcontainer/.bashrc ~/.bashrc",
 	"capAdd": [
 		"SYS_PTRACE"
 	],
