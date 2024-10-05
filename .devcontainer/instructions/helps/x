@@ -6,7 +6,7 @@ $ x <x|bash|dart|python|go>
 	^ untuk menampilkan bantuan dari aplikasi yang dipilih
 
 Contoh Penggunaan:
-$ NAMA ='Alfian Badrul Isnan'
+$ NAMA='Alfian Badrul Isnan'
 $ x
 $ x bash
 $ x dart
